@@ -1,0 +1,70 @@
+{
+  "fetch_enabled": {
+    "description": "自动抓取卡片链接的正文",
+    "type": "bool",
+    "default": true
+  },
+  "fetch_timeout": {
+    "description": "抓取超时（秒），只影响非 B 站、非小红书站点",
+    "type": "int",
+    "default": 10
+  },
+  "fetch_retry": {
+    "description": "超时后重试次数（0-3）",
+    "type": "int",
+    "default": 1
+  },
+  "fetch_max_chars": {
+    "description": "正文最多保留多少字，0 = 不截断",
+    "type": "int",
+    "default": 0
+  },
+  "fetch_groups": {
+    "description": "只在这些群抓正文，留空 = 所有群都抓",
+    "type": "list",
+    "default": []
+  },
+  "cache_ttl": {
+    "description": "同一篇内容缓存多久（秒）",
+    "type": "int",
+    "default": 3600
+  },
+  "cache_max": {
+    "description": "缓存最多保留多少条",
+    "type": "int",
+    "default": 50
+  },
+  "skip_fetch_hosts": {
+    "description": "命中这些域名就不抓正文",
+    "type": "list",
+    "default": [
+      "douyin.com",
+      "iesdouyin.com",
+      "weibo.com",
+      "weibo.cn",
+      "t.cn",
+      "zhihu.com",
+      "zhimg.com"
+    ]
+  },
+  "attach_image": {
+    "description": "把卡片配图交给多模态模型",
+    "type": "bool",
+    "default": true
+  },
+  "max_images": {
+    "description": "每张卡片最多带几张图（0 = 不带图）",
+    "type": "int",
+    "default": 9
+  },
+  "max_field_len": {
+    "description": "标题/摘要等字段最多保留多少字，0 = 不截断",
+    "type": "int",
+    "default": 0
+  },
+  "dump_raw": {
+    "description": "在日志里打印卡片原始 JSON（调试用，含 uin 等字段，平时建议关）",
+    "type": "bool",
+    "default": true
+  }
+}

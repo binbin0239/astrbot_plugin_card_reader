@@ -1,0 +1,7 @@
+name: astrbot_plugin_card_reader
+display_name: 卡片转文字
+desc: 把 QQ 分享卡片转成文本并抓正文：小红书抓 SSR 正文与多图，B 站走公开 API（约 0.5 秒），其它站点走 DeepSeek；全部参数可在插件配置里调
+help: 安装后自动生效。日志里搜 [card_reader]，每条都会带「群号 / 发送者」。
+version: 1.0.0
+author: local
+astrbot_version: ">=4.0.0"
